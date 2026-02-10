@@ -3,13 +3,13 @@
 Two lightweight Node.js scripts for automated trading on Binance USDT-margined perpetual futures:
 
 - `binance_list_open.js` → Scans all symbols, uses RSI(5) on 1m candles to open LONG (RSI ≤ 10) or SHORT (RSI ≥ 80) positions when price < $1  
-- `binance_support_close.js` → Monitors open positions, closes them at +3% profit (of initial margin), shows funding rate profitability
+- `binance_support_close.js` → Monitors open positions, closes them at +3% profit (of initial margin), adding margin and shows funding rate profitability
 
-**High risk – experimental code – no stop-loss – use only with funds you can lose completely.**
+**High RISK– use only with funds you can lose completely.**
 
 ## Features
 
-- All USDT perpetual contracts scanning
+- All Binance USDT perpetual contracts scanning
 - RSI(5) + EMA20 display
 - Fixed size + leverage (default 3×)
 - Telegram notifications (open / close / warnings)
@@ -33,7 +33,7 @@ Rename .env.example to .env file:
 envAPI_KEY=xxx
 API_SECRET=yyy
 TELEGRAM_TOKEN=123456:AAF...
-TELEGRAM_CHAT_ID=-1001234567890
+TELEGRAM_CHAT_ID=-10....
 Usage
 Terminal 1 – Entry scanner
 Bashnode binance_list_open.js
